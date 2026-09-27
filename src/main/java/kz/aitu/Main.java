@@ -1,0 +1,17 @@
+package kz.aitu;
+
+import java.io.File;
+
+public class Main {
+    public static void main(String[] args) {
+        File resultsDir = new File("results");
+        if (!resultsDir.exists()) {
+            resultsDir.mkdir();
+        }
+
+        Experiment exp = new Experiment();
+        exp.runAllExperiments();
+
+        System.out.println("Эксперименттер аяқталды. Нәтижелер results/results.csv файлында сақталды.");
+    }
+}
